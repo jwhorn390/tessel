@@ -1,11 +1,13 @@
+// Import the interface to Tessel hardware
 var tessel = require('tessel');
 
-var led1 = tessel.led[0].output(0);
-var led2 = tessel.led[1].output(1);
+// Turn one of the LEDs on to start.
+tessel.led[2].on();
 
+// Blink!
 setInterval(function () {
+  tessel.led[2].toggle();
+  tessel.led[3].toggle();
+}, 100);
 
-    led1.toggle();
-    led2.toggle();
-
-}, 200);
+console.log("I'm blinking! (Press CTRL + C to stop)");

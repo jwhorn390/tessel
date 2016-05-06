@@ -1,15 +1,17 @@
-var tessel = require('tessel');
-var notificationLED = tessel.led[3];
+var av = require('tessel-av');
+var os = require('os');
+var http = require('http');
+var port = 8080;
+var camera = new av.Camera();
 
-var camera = require('camera-vc0706').use(tessel.port['A']);
+http.createServer(function (req, res) {
 
-camera.on('ready', function () {
+    var takePicture = camera.capture();
 
-    notificationLED.high();
-
-    camera.takePicture(function (err, image) {
-        if (err) return console.error(err);
-        process.sendfile('audience.jpg', image);
+    takePicture.on('data', function (image) {
+        res.writeHead(200, {'Content-Type': 'image/jpg'});
+        res.write(image);
+        res.end();
     });
 
-});
+}).listen(port, () => console.log(`http://${os.hostname()}.local:${port}`));
