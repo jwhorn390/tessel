@@ -1,3 +1,5 @@
+Start
+---
 npm install -g t2-cli
 
 t2 list
@@ -6,4 +8,13 @@ t2 update (might take ~5 minutes)
 
 t2 wifi -n 'Grace Hopper' -p GraceHopp3r
 
-t2 provision (allows for you to push code via WiFi -- not necessary!)
+WiFi cycling
+---
+
+Unplug tessel, plug back in, wait for boot
+
+t2 wifi --off
+
+t2 wifi --on
+
+t2 wifi -n 'Grace Hopper' -p GraceHopp3r
