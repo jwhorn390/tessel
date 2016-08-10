@@ -8,6 +8,8 @@ t2 update (might take ~5 minutes)
 
 t2 wifi -n 'Grace Hopper' -p GraceHopp3r
 
+t2 init (in your project folder)
+
 WiFi cycling
 ---
 
