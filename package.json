@@ -2,17 +2,19 @@
   "name": "tessel-code",
   "version": "0.0.0",
   "description": "Tessel project",
-  "main": "camera.js",
+  "main": "ambient.js",
   "dependencies": {
     "ambient-attx4": "^0.2.8",
     "climate-si7020": "^0.1.1",
+    "rfid-pn532": "^0.1.9",
+    "slack-notify": "^0.1.6",
     "tessel-av": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "git://github.com/joedotjs/tessel-code.git",
+  "repository": "https://github.com/joedotjs/tessel-code.git",
   "keywords": [
     "Tessel"
   ],
