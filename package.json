@@ -4,9 +4,13 @@
   "description": "Tessel project",
   "main": "ambient.js",
   "dependencies": {
+    "accel-mma84": "^0.2.4",
     "ambient-attx4": "^0.2.8",
     "climate-si7020": "^0.1.1",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
     "rfid-pn532": "^0.1.9",
+    "sequelize": "^3.27.0",
     "slack-notify": "^0.1.6",
     "tessel-av": "^0.6.0"
   },
